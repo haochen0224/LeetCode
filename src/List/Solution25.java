@@ -9,6 +9,7 @@ public class Solution25 {
         dummyNode.next = head;
         ListNode end = dummyNode;
         ListNode pre = dummyNode;
+        ListNode start = pre.next;
         while(end.next != null){
             for(int i = 0; i < k; ++i){
                 end = end.next;
@@ -16,7 +17,6 @@ public class Solution25 {
                     return dummyNode.next;
                 }
             }
-            ListNode start = pre.next;
             ListNode next = end.next;
             end.next = null;
             pre.next = reverseList(start);
