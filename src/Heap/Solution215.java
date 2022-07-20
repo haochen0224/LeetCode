@@ -49,39 +49,40 @@ public class Solution215 {
     }
 }
 
+/**
+ * 更快的实现：快排思想。每次partition可以确定一个元素的最终位置，当partition的结果是nums.length-k的时候，就找到了目标值
+ */
 
-
-
-// class Solution {
-//     Random random = new Random();
-//     public int findKthLargest(int[] nums, int k) {
-//         return quickSelection(nums,0,nums.length-1,nums.length-k);
-//     }
-//     private int quickSelection(int[] arr,int L, int R, int index){
-//         int q = randomPartition(arr,L,R);
-//         if(q == index){
-//             return arr[q];
-//         }
-//         return q < index ? quickSelection(arr,q+1,R,index) : quickSelection(arr,L,q-1,index);
-//     }
-//     private int randomPartition(int[] arr, int L, int R){
-//         int i = random.nextInt(R-L+1)+L;
-//         swap(arr,i,R);
-//         return Partition(arr,L,R);
-//     }
-//     private int Partition(int[] arr, int L, int R){
-//         int x = arr[R], i = L-1;
-//         for(int j = L; j < R; j++){
-//             if(arr[j] <= x){
-//                 swap(arr,++i,j);
-//             }
-//         }
-//         swap(arr,i+1,R);
-//         return i+1;
-//     }
-//     private void swap(int[] arr,int i, int j){
-//         int temp = arr[i];
-//         arr[i] = arr[j];
-//         arr[j] = temp;
-//     }
+//class Solution215 {
+//    Random random = new Random();
+//    public int findKthLargest(int[] nums, int k) {
+//        return quickSelection(nums,0,nums.length-1,nums.length-k);
+//    }
+//    private int quickSelection(int[] nums,int L, int R, int index){
+//        int p = randomPartition(nums,L,R);
+//        if(p == index){
+//            return nums[p];
+//        }
+//        return p < index ? quickSelection(nums,p+1,R,index) : quickSelection(nums,L,p-1,index);
+//    }
+//    private int randomPartition(int[] nums,int L,int R){
+//        int rand = random.nextInt(R-L+1)+L;
+//        swap(nums,rand,R);
+//
+//        int pivot = nums[R];
+//        int i = L-1;
+//        for(int j = L; j < R; ++j){
+//            if(nums[j] <= pivot){
+//                swap(nums,++i,j);
+//            }
+//        }
+//        swap(nums,i+1,R);
+//        return i+1;
+//    }
+//    private void swap(int[] nums,int i, int j){
+//        int temp = nums[i];
+//        nums[i] = nums[j];
+//        nums[j] = temp;
+//    }
+//}
 
