@@ -29,26 +29,28 @@ public class Solution378 {
  * 更快的实现：二分查找
  */
 //class Solution378 {
-//    public int kthSmallest(int[][] matrix, int k) {
-//        int n = matrix.length;
-//        int left = matrix[0][0];
-//        int right = matrix[n-1][n-1];
-//        while(left < right){
-//            int mid = left + (right-left)/2;
-//            if(check(matrix,mid,n,k)){
-//                right = mid; //若<=mid的元素的数量>=k
-//            }else{
-//                left = mid + 1; //若<=mid的元素的数量<k
-//            }
+//public int kthSmallest(int[][] matrix, int k) {
+//    int n = matrix.length;
+//    int left = matrix[0][0];
+//    int right = matrix[n-1][n-1];
+//    int ans = 0;
+//    while(left <= right){
+//        int mid = left + (right-left)/2;
+//        if(check(matrix,mid,n,k)){
+//            ans = mid;
+//            right = mid - 1 ;
+//        }else{
+//            left = mid + 1;
 //        }
-//        return left;
 //    }
+//    return left;
+//}
 //    private boolean check(int[][] matrix,int mid,int n,int k){
 //        int i = n-1;
 //        int j = 0;
 //        int num = 0;
 //        while(i >= 0 && j < n){
-//            if(matrix[i][j] <= mid){ //如果matrix[i][j] <= mid，说明该列所有数都<=mid
+//            if(matrix[i][j] <= mid){
 //                num += i+1;
 //                ++j;
 //            }else{
