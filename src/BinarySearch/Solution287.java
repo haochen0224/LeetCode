@@ -6,6 +6,11 @@ package BinarySearch;
  * @Create 2022/7/23 23:52
  */
 public class Solution287 {
+    /**
+     * 二分写法一
+     * @param nums
+     * @return
+     */
      public int findDuplicate(int[] nums) {
          int left = 1, right = nums.length-1;
          int ans = -1;
@@ -26,6 +31,27 @@ public class Solution287 {
          }
          return ans;
      }
+    /**
+     * 二分写法二
+     */
+//    public int findDuplicate(int[] nums) {
+//        int left = 1, right = nums.length-1;
+//        while(left < right){
+//            int mid = left + ((right-left)>>1);
+//            int count = 0;
+//            for(int num : nums){
+//                if(num <= mid){
+//                    ++count;
+//                }
+//            }
+//            if(count <= mid){
+//                left = mid + 1;
+//            }else{
+//                right = mid;
+//            }
+//        }
+//        return left;
+//    }
 /**
  * 更快的实现：快慢指针
   */
