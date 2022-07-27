@@ -1,4 +1,4 @@
-package DualPointer;
+package DoublePointer;
 
 /**
  * 209. 长度最小的子数组
