@@ -1,4 +1,6 @@
-package COMPANY.ByteDance;
+package COMPANY.ByteDance.List;
+
+import COMPANY.ByteDance.List.ListNode;
 
 /**
  * 25. K 个一组翻转链表

@@ -1,4 +1,6 @@
-package COMPANY.ByteDance;
+package COMPANY.ByteDance.List;
+
+import COMPANY.ByteDance.List.ListNode;
 
 /**
  * 143. 重排链表

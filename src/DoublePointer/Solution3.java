@@ -8,7 +8,7 @@ import java.util.Set;
  * @Author Hao Chen
  * @Create 2022/7/26 19:59
  */
-public class Solution {
+public class Solution3 {
     public int lengthOfLongestSubstring(String s) {
         if(s.length() == 0){
             return 0;

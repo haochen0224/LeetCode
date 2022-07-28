@@ -1,4 +1,4 @@
-package COMPANY.ByteDance;
+package COMPANY.ByteDance.List;
 
 /**
  * @Author Hao Chen

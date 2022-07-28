@@ -1,4 +1,6 @@
-package COMPANY.ByteDance;
+package COMPANY.ByteDance.List;
+
+import COMPANY.ByteDance.List.ListNode;
 
 /**
  * 21. 合并两个有序链表

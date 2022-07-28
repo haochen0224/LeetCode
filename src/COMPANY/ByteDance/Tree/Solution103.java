@@ -1,4 +1,6 @@
-package COMPANY.ByteDance;
+package COMPANY.ByteDance.Tree;
+
+import COMPANY.ByteDance.Tree.TreeNode;
 
 import java.util.ArrayList;
 import java.util.Deque;

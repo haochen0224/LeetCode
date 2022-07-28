@@ -1,4 +1,4 @@
-package COMPANY.ByteDance;
+package COMPANY.ByteDance.DoublePointer;
 
 import java.util.HashSet;
 import java.util.Set;

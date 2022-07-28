@@ -7,7 +7,7 @@ import java.util.*;
  * @Author Hao Chen
  * @Create 2022/7/26 22:32
  */
-public class Solution {
+public class Solution49 {
     public List<List<String>> groupAnagrams(String[] strs) {
         //同一分组的字母异位词按字典序的排序是一致的，把这个作为key，把该key的字母异位词存到一个List中作为value
         Map<String,List<String>> map = new HashMap<>();

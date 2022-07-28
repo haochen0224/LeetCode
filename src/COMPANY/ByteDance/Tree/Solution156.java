@@ -1,4 +1,6 @@
-package COMPANY.ByteDance;
+package COMPANY.ByteDance.Tree;
+
+import COMPANY.ByteDance.Tree.TreeNode;
 
 /**
  * 156. 上下翻转二叉树

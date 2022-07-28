@@ -1,4 +1,6 @@
-package COMPANY.ByteDance;
+package COMPANY.ByteDance.List;
+
+import COMPANY.ByteDance.List.ListNode;
 
 /**
  * 2. 两数相加
