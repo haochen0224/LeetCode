@@ -1,4 +1,4 @@
-package COMPANY.ByteDance;
+package COMPANY.ByteDance.Other;
 
 /**
  * 31. 下一个排列

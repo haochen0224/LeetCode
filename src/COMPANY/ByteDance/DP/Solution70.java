@@ -1,4 +1,4 @@
-package COMPANY.ByteDance;
+package COMPANY.ByteDance.DP;
 
 /**
  * 70. 爬楼梯

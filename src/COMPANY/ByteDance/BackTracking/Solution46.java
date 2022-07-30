@@ -1,4 +1,4 @@
-package COMPANY.ByteDance;
+package COMPANY.ByteDance.BackTracking;
 
 import java.util.ArrayList;
 import java.util.Deque;

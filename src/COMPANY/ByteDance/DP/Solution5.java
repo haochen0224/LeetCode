@@ -1,4 +1,4 @@
-package COMPANY.ByteDance;
+package COMPANY.ByteDance.DP;
 
 /**
  * 5. 最长回文子串

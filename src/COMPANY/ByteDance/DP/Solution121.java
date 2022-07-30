@@ -1,4 +1,4 @@
-package COMPANY.ByteDance;
+package COMPANY.ByteDance.DP;
 
 /**
  * 121. 买卖股票的最佳时机

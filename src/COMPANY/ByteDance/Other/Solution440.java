@@ -1,4 +1,4 @@
-package COMPANY.ByteDance;
+package COMPANY.ByteDance.Other;
 
 /**
  * 440. 字典序的第K小数字

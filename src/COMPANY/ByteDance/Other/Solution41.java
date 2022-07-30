@@ -1,4 +1,4 @@
-package COMPANY.ByteDance;
+package COMPANY.ByteDance.Other;
 
 /**
  * 41. 缺失的第一个正数

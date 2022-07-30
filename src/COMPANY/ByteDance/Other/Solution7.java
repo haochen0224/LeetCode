@@ -1,4 +1,4 @@
-package COMPANY.ByteDance;
+package COMPANY.ByteDance.Other;
 
 /**
  * 7. 整数反转

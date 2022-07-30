@@ -1,4 +1,4 @@
-package COMPANY.ByteDance;
+package COMPANY.ByteDance.BinarySearch;
 
 /**
  * 4. 寻找两个正序数组的中位数

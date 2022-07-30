@@ -1,4 +1,4 @@
-package COMPANY.ByteDance;
+package COMPANY.ByteDance.Design;
 
 import java.util.HashMap;
 import java.util.Map;

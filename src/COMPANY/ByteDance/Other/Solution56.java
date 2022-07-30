@@ -1,4 +1,4 @@
-package COMPANY.ByteDance;
+package COMPANY.ByteDance.Other;
 
 import java.util.ArrayList;
 import java.util.Arrays;

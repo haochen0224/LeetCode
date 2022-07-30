@@ -1,4 +1,4 @@
-package COMPANY.ByteDance;
+package COMPANY.ByteDance.Stack;
 
 import java.util.Deque;
 import java.util.LinkedList;
