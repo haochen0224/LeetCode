@@ -1,4 +1,4 @@
-package Greedy;
+package COMPANY.ByteDance.Greedy;
 
 /**
  * 45. 跳跃游戏 II
