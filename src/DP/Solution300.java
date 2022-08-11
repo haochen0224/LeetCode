@@ -1,5 +1,7 @@
 package DP;
 
+import java.util.Arrays;
+
 /**
  * 300. 最长递增子序列
  * @Author Hao Chen
@@ -11,10 +13,9 @@ public class Solution300 {
             return 0;
         }
         int[] dp = new int[nums.length];
+        Arrays.fill(dp,1);
         int res = 1;
-        dp[0] = 1;
         for(int i = 1; i < nums.length; ++i){
-            dp[i] = 1;
             for(int j = 0; j < i; ++j){
                 if(nums[i] > nums[j]){
                     dp[i] = Math.max(dp[i], dp[j] + 1);
@@ -28,23 +29,26 @@ public class Solution300 {
 /**
  * 更快的实现：二分查找
  */
-//public int lengthOfLIS(int[] nums) {
-//    int[] tail = new int[nums.length];
-//    int res = 0;
-//    for(int num : nums){
-//        int left = 0, right = res;
+//public int lengthOfLIS(int[] nums){
+//    int[] top = new int[nums.length];
+//    int piles = 0;
+//    for(int i = 0; i < nums.length; ++i){
+//        int poker = nums[i];
+//        int left = 0, right = piles;
 //        while(left < right){
-//            int mid = left + (right-left)/2;
-//            if(tail[mid] < num){
+//            int mid = left + ((right-left)>>1);
+//            if(top[mid] > poker){
+//                right = mid;
+//            }else if(top[mid] < poker){
 //                left = mid + 1;
 //            }else{
 //                right = mid;
 //            }
 //        }
-//        tail[left] = num;
-//        if(right == res){
-//            ++res;
+//        if(left == piles){
+//            ++piles;
 //        }
+//        top[left] = poker;
 //    }
-//    return res;
+//    return piles;
 //}
