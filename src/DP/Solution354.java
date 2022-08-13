@@ -28,7 +28,7 @@ public class Solution354 {
     //二分查找
     public int maxEnvelopes(int[][] envelopes) {
         int n = envelopes.length;
-        Arrays.sort(envelopes,(a, b)->a[0]==b[0]?b[1]-a[1]:a[0]-b[0]);
+        Arrays.sort(envelopes,(a,b)->a[0]==b[0]?b[1]-a[1]:a[0]-b[0]);
         int[] nums = new int[n];
         for(int i = 0; i < n; ++i){
             nums[i] = envelopes[i][1];
