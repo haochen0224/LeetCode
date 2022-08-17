@@ -1,9 +1,9 @@
-package COMPANY.ByteDance.DP;
+package DP;
 
 /**
  * 10. 正则表达式匹配
  * @Author Hao Chen
- * @Create 2022/8/8 20:29
+ * @Create 2022/8/17 17:39
  */
 public class Solution10 {
     public boolean isMatch(String s, String p) {
@@ -25,7 +25,7 @@ public class Solution10 {
                 }else if(cp[j-1] == '*'){
                     if(cs[i-1] == cp[j-2] || cp[j-2] == '.'){ //p串'*'前的字符能够和s串末尾字符匹配，此时可以匹配0次或多次
                         dp[i][j] = dp[i][j-2] || dp[i-1][j]; //若匹配0次，则跳过p[j-2]，判断p[j-3]，那么dp[i][j] = dp[i][j-2]
-                                                             //若匹配多次，那么消灭掉s[i-1]，判断s[i-2]，那么dp[i][j] = dp[i-1][j]
+                        //若匹配多次，那么消灭掉s[i-1]，判断s[i-2]，那么dp[i][j] = dp[i-1][j]
                     }else{
                         dp[i][j] = dp[i][j-2]; //p串'*'前的字符不能和s串末尾字符匹配，此时只能匹配0次
                     }
