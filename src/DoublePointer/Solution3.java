@@ -10,14 +10,13 @@ import java.util.Set;
  */
 public class Solution3 {
     public int lengthOfLongestSubstring(String s) {
-        if(s.length() == 0){
+        if(s == null || s.length() == 0){
             return 0;
         }
-        int right = -1;
-        int res = 0;
         Set<Character> set = new HashSet<>();
+        int right = -1;
+        int res = 1;
         for(int left = 0; left < s.length(); ++left){
-            char ch = s.charAt(left);
             if(left > 0){
                 set.remove(s.charAt(left-1));
             }
