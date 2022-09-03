@@ -1,4 +1,4 @@
-package Other;
+package Simulation;
 
 import java.util.Arrays;
 

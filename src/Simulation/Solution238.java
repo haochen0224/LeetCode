@@ -1,4 +1,4 @@
-package Other;
+package Simulation;
 
 /**
  * 238. 除自身以外数组的乘积

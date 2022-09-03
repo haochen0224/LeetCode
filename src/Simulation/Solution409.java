@@ -1,4 +1,4 @@
-package Other;
+package Simulation;
 
 /**
  * 409. 最长回文串

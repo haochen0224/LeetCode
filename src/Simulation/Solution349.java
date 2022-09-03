@@ -1,4 +1,4 @@
-package Other;
+package Simulation;
 
 import java.util.HashSet;
 import java.util.Set;
