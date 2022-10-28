@@ -6,34 +6,39 @@ package BinarySearch;
  * @Create 2022/9/23 17:29
  */
 public class Solution410 {
-    public int splitArray(int[] nums, int m) {
-        int n = nums.length;
-        int L = 0, R = 0;
-        for(int i = 0; i < n; ++i){
-            L = Math.max(L,nums[i]);
-            R += nums[i];
+    public int splitArray(int[] nums, int k) {
+        if(nums == null || nums.length == 0){
+            return 0;
         }
-        while(L < R){
-            int mid = L + ((R-L)>>1);
-            if(check(nums,mid,m)){
-                R = mid;
+        int n = nums.length;
+        int left = 0, right = 0;
+        for(int i = 0; i < n; ++i){
+            left = Math.max(left,nums[i]);
+            right += nums[i];
+        }
+        int res = 0;
+        while(left <= right){
+            int mid = left + ((right-left)>>1);
+            if(check(nums,mid,k)){
+                res = mid;
+                right = mid - 1;
             }else{
-                L = mid+1;
+                left = mid + 1;
             }
         }
-        return L;
+        return res;
     }
-    private boolean check(int[] nums,int x,int m){
-        int sum = 0;
+    private boolean check(int[] nums,int bucket,int k){
+        int curSum = 0;
         int cnt = 1;
         for(int i = 0; i < nums.length; ++i){
-            if(sum+nums[i] > x){
+            if(curSum+nums[i] > bucket){
                 ++cnt;
-                sum = nums[i];
+                curSum = nums[i];
             }else{
-                sum += nums[i];
+                curSum += nums[i];
             }
         }
-        return cnt <= m;
+        return cnt <= k;
     }
 }
