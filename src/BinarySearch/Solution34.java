@@ -7,25 +7,32 @@ package BinarySearch;
  */
 public class Solution34 {
     public int[] searchRange(int[] nums, int target) {
-        int leftIndex = binarySearch(nums,target,true);
-        int rightIndex = binarySearch(nums,target,false)-1;
-        if(leftIndex <= rightIndex && rightIndex <= nums.length-1 && nums[leftIndex] == target && nums[rightIndex] == target){
-            return new int[]{leftIndex,rightIndex};
+        if(nums == null || nums.length == 0){
+            return new int[]{-1,-1};
         }
-        return new int[]{-1,-1};
+        int start = -1;
+        start = binarySearch(nums,target);
+        if(start == -1){
+            return new int[]{-1,-1};
+        }
+        int end = start;
+        while(end+1 < nums.length && nums[end+1] == nums[end]){
+            ++end;
+        }
+        return new int[]{start,end};
     }
-    private int binarySearch(int[] nums,int target,boolean lower){
+    private int binarySearch(int[] nums,int target){
         int left = 0, right = nums.length-1;
-        int ans = nums.length;
+        int res = 0;
         while(left <= right){
-            int mid = left + (right-left)/2;
-            if(nums[mid] > target || lower && nums[mid] >= target){
+            int mid = left + ((right-left)>>1);
+            if(nums[mid] >= target){
+                res = mid;
                 right = mid - 1;
-                ans = mid;
             }else{
                 left = mid + 1;
             }
         }
-        return ans;
+        return nums[res] == target ? res : -1;
     }
 }
