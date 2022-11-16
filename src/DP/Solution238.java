@@ -11,7 +11,7 @@ public class Solution238 {
             return new int[0];
         }
         int n = nums.length;
-        int[] prefix = new int[n];
+        int[] prefix = new int[n]; //prefix[i] 表示除了 nums[i] 以外的前缀乘积
         prefix[0] = 1;
         for(int i = 1; i < n; ++i){
             prefix[i] = prefix[i-1] * nums[i-1];
